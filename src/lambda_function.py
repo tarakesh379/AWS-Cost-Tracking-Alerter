@@ -2,12 +2,12 @@ import json
 import boto3
 from datetime import datetime, timedelta
 import os
-from config import SNS_TOPIC-ARN, BUDGET-THRESHOLD, AWS_REGION
+from config import SNS_TOPIC_ARN, BUDGET_THRESHOLD, AWS_REGION
 
 def lambda_handler(event, context):
     print("=== AWS Cost Tracking Alerter ===")
     print("Built on CentOS Stream 9 - Python 3.9")
-    print(f"Using SNS Topic: {SNS_TOPIC-ARN}")
+    print(f"Using SNS Topic: {SNS_TOPIC_ARN}")
 
     try:
         ce_client = boto3.client('ce', region_name=AWS_REGION)
