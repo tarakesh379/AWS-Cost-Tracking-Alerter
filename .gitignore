@@ -1,41 +1,62 @@
-# Environment variables
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
 
+# Virtual Environment (THE CULPRIT!)
+venv/
+env/
+.env
+.venv
+virtualenv/
+
+# Environment variables
 .env
 .env.local
 .env.production
 
-# AWS Credentials
-
+# AWS
 .aws/
 credentials
 config
 
-# Python
-
-__pycache__/
-*.py[cod]
-*$py.class
-*.so
-.python
-venv/
-env/
-
-# IDE 
+# IDE
 .vscode/
 .idea/
 *.swp
 *.swo
+*~
 
 # OS
-
 .DS_Store
 Thumbs.db
 
 # Logs
-
 *.log
 logs/
 
-# Temporary files
-temp/
-tmp/
+# Python virtual environment specific
+venv/lib/
+venv/bin/
+venv/include/
+venv/pyvenv.cfg
