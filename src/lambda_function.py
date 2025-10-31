@@ -103,15 +103,22 @@ Top services by cost:
         
         message += "\nBuilt with Python 3.9 on CentOS Stream 9"
         message += f"\nSNS Topic: [Configured via environment]"
-
+        
         response = sns_client.publish(
             TopicArn=sns_topic_arn,
             Subject='AWS Cost Alert - Built on CentOS Stream 9',
             Message=message
         )
-
+        
         print(f"Alert sent successfully! Message ID: {response['MessageId']}")
-
+        
     except Exception as e:
         print(f"Failed to send alert: {str(e)}")
-EOF
+
+# Test locally (only if SNS_TOPIC_ARN is set)
+if __name__ == "__main__":
+    if os.environ.get('SNS_TOPIC_ARN'):
+        result = lambda_handler({}, {})
+        print(result)
+    else:
+        print("SNS_TOPIC_ARN not set - skipping local test")
