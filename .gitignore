@@ -61,3 +61,4 @@ venv/bin/
 venv/include/
 venv/pyvenv.cfg
 .env
+.env
