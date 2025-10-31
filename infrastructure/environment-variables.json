@@ -1,7 +1,7 @@
 {
   "lambda_function": {
-	"SNS_TOPIC_ARN": "arn:aws:sns:ap-south-1:331867786280:cost-alerts-topic",
-	"BUDGET_THRESHOLD": "8.00",
-	"AWS_REGION": "ap-south-1"
+    "AWS_REGION": "ap-south-1",
+    "SNS_TOPIC_ARN": "arn:aws:sns:YOUR-REGION:YOUR-ACCOUNT-ID:YOUR-TOPIC-NAME",
+    "BUDGET_THRESHOLD": "8.00"
   }
 }
