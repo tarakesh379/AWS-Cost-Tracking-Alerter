@@ -91,7 +91,7 @@ def lambda_handler(event, context):
 def send_alert(sns_client, total_cost, service_costs, sns_topic_arn):
     try:
         message = f"""
-🚨 AWS COST ALERT - Built on CentOS Stream 9 🚨
+AWS COST ALERT - Built on CentOS Stream 9
 
 Your current AWS costs: ${total_cost:.2f}
 Budget threshold: ${budget_threshold} (80% of $10 budget)
